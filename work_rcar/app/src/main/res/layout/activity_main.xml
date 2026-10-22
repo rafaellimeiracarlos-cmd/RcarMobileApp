@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0A0A0A" tools:context=".MainActivity">
+
+    <!-- LOGO PRINCIPAL NO TOPO -->
+
+    <!-- LINHA GUIA CENTRAL VERTICAL PARA DIVIDIR A TELA (55% para o formulário) -->
+
+    <ImageView android:id="@+id/imgLogoTop" android:layout_width="392dp" android:layout_height="142dp" android:layout_marginTop="16dp" android:contentDescription="@string/logo_rcarpremium" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.496" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/imglogo" android:clickable="true" android:focusable="true"/>
+
+    <androidx.constraintlayout.widget.Guideline android:id="@+id/guidelineVertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" app:layout_constraintGuide_percent="0.98"/>
+
+    <!-- IMAGEM DE FUNDO DO CARRO E PEÇAS (Fica do lado direito) -->
+    <!-- APONTADO PARA O SEU ARQUIVO REAL -->
+
+    <!-- CARD / CAIXA BRANCA FLUTUANTE (Fica do lado esquerdo) -->
+    <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="0dp" android:layout_marginStart="16dp" android:layout_marginTop="16dp" android:layout_marginEnd="8dp" android:layout_marginBottom="16dp" app:cardBackgroundColor="#FFFFFF" app:cardCornerRadius="16dp" app:cardElevation="4dp" app:layout_constraintBottom_toTopOf="@+id/linearLayoutFooter" app:layout_constraintEnd_toStartOf="@+id/guidelineVertical" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/imgLogoTop">
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:scrollbars="none">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bem_vindo_de_volta" android:textColor="#000000" android:textSize="22sp" android:textStyle="bold"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/fa_a_login_para_acessar_sua_conta" android:textColor="#555555" android:textSize="12sp"/>
+
+                <!-- RÓTULO E-MAIL -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/e_mail" android:textColor="#000000" android:textSize="12sp" android:textStyle="bold"/>
+
+                <EditText android:id="@+id/textEmail" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="4dp" android:background="@android:color/white" android:hint="@string/seu_email_com" android:inputType="textEmailAddress" android:paddingHorizontal="12dp" android:textColor="#222222" android:textColorHint="#888888" android:textSize="14sp" android:importantForAutofill="no"/>
+
+                <!-- RÓTULO SENHA -->
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/senha" android:textColor="#000000" android:textSize="12sp" android:textStyle="bold"/>
+
+                <EditText android:id="@+id/textPassword" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="4dp" android:background="@android:color/white" android:hint="@string/digite_sua_senha" android:inputType="textPassword" android:paddingHorizontal="12dp" android:textColor="#222222" android:textColorHint="#888888" android:textSize="14sp" android:importantForAutofill="no"/>
+
+                <!-- ESQUECEU MINHA SENHA -->
+                <TextView android:id="@+id/textEsqSenha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="end" android:layout_marginTop="8dp" android:text="@string/esqueci_minha_senha" android:textColor="#FF5722" android:textSize="12sp" android:textStyle="bold"/>
+
+                <!-- BOTÃO ENTRAR LARANJA -->
+                <Button android:id="@+id/btnEntrar" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="24dp" android:backgroundTint="#FF5722" android:text="@string/entrar" android:textColor="#FFFFFF" android:textStyle="bold" app:cornerRadius="8dp"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:text="@string/ou_continue_com" android:textColor="#777777" android:textSize="11sp"/>
+
+                <!-- BOTÕES SOCIAIS -->
+                <LinearLayout style="?android:attr/buttonBarStyle" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginTop="12dp" android:orientation="horizontal">
+
+
+                    <!-- BOTÃO DO GOOGLE (CORRIGIDO) -->
+                    <ImageButton android:id="@+id/btnGoogle" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginEnd="4dp" android:layout_weight="1" android:background="?android:attr/selectableItemBackground" android:scaleType="fitCenter" app:srcCompat="@drawable/google" android:contentDescription="@string/login_com_google"/>
+
+                    <!-- BOTÃO DO FACEBOOK (CORRIGIDO) -->
+                    <ImageButton android:id="@+id/btnFacebook" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginStart="4dp" android:layout_weight="1" android:background="?android:attr/selectableItemBackground" android:scaleType="fitCenter" app:srcCompat="@drawable/facebook" android:contentDescription="@string/login_com_facebook"/>
+
+                    <!-- android:textSize="12sp"
+                         android:textSize="12sp"
+                         android:textColor="#333333"
+                         android:textColor="#333333"
+                         style="?android:attr/buttonBarButtonStyle"
+                         android:text="@string/google"
+                         android:text="@string/facebook"-->
+                </LinearLayout>
+
+                <!-- TEXTO CADASTRE-SE -->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_marginTop="24dp" android:orientation="horizontal">
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ainda_n_o_tem_uma_conta" android:textColor="#555555" android:textSize="12sp"/>
+
+                    <TextView android:id="@+id/btnCadastro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cadastre_se" android:textColor="#FF5722" android:textSize="12sp" android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <!-- RODAPÉ DA TELA -->
+    <LinearLayout android:id="@+id/linearLayoutFooter" android:layout_width="match_parent" android:layout_height="36dp" android:layout_marginBottom="16dp" android:gravity="center" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" tools:layout_editor_absoluteX="0dp" android:layout_marginStart="30dp" android:layout_marginEnd="30dp" android:background="@drawable/bg_floating_checkout" android:elevation="14dp" android:padding="5dp"><TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="RCAR PREMIUM  •  QUALIDADE EM CADA DETALHE" android:textSize="10sp" android:textColor="#FF9A28" android:gravity="center" android:letterSpacing="0.05"/></LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

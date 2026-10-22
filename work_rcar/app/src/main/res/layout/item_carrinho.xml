@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+        <!-- Imagem do Produto -->
+
+        <ImageView
+            android:id="@+id/imgProduto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pecasautomotiva" />
+
+        <!-- Informações do Produto -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtNomeProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do Produto"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+            <!-- Controle de Quantidade (+ e -) -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp">
+                <Button
+                    android:id="@+id/btnDiminuir"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="0dp"
+                    android:text="-"
+                    android:textSize="16sp"
+                    android:textColor="#FF5722"
+                    android:backgroundTint="#F0F0F0"
+                    app:cornerRadius="4dp" />
+
+                <TextView
+                    android:id="@+id/txtQtdProduto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:text="1"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#222222" />
+
+                <Button
+                    android:id="@+id/btnAumentar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="0dp"
+                    android:text="+"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#FF5722"
+                    app:cornerRadius="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtPrecoProduto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="R$ 0,00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FF5722" />
+        </LinearLayout>
+
+        <!-- Botão Remover (Ícone de Lixeira) -->
+
+        <ImageView
+            android:id="@+id/btnRemoverProduto"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:padding="4dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Remover produto"
+            app:tint="#FF3B30" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

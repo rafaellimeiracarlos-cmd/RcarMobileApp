@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#05090B">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/btnBackDados"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="‹"
+                    android:textColor="#FF7A00"
+                    android:textSize="40sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:layout_width="92dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rcarlogo"
+                    android:scaleType="centerInside"
+                    android:contentDescription="RCAR Premium" />
+
+                <Space
+                    android:layout_width="48dp"
+                    android:layout_height="1dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dados Cadastrais"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mantenha seus dados sempre atualizados."
+                android:textColor="#9AA4AA"
+                android:textSize="14sp"
+                android:layout_marginTop="3dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#0C1419"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="14dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        app:cardBackgroundColor="#17242C"
+                        app:cardCornerRadius="29dp"
+                        app:cardElevation="0dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="👤"
+                            android:textSize="27sp" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="14dp">
+                        <TextView
+                            android:id="@+id/txtDadosResumoNome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cliente RCAR Premium"
+                            android:textColor="#FFFFFF"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtDadosResumoEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="cliente@email.com"
+                            android:textColor="#AAB4BA"
+                            android:textSize="13sp"
+                            android:layout_marginTop="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="★ Cliente Premium"
+                            android:textColor="#FF9A26"
+                            android:textSize="12sp"
+                            android:layout_marginTop="5dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INFORMAÇÕES PESSOAIS"
+                android:textColor="#FF7A00"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/editDadosNome"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="Nome completo *"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#7D8990"
+                android:inputType="textPersonName"
+                android:background="@drawable/bg_input_dark" />
+
+            <EditText
+                android:id="@+id/editDadosEmail"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="E-mail *"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#7D8990"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/bg_input_dark"
+                android:layout_marginTop="9dp" />
+
+            <EditText
+                android:id="@+id/editDadosNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="Data de nascimento"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#7D8990"
+                android:inputType="date"
+                android:background="@drawable/bg_input_dark"
+                android:layout_marginTop="9dp" />
+
+            <EditText
+                android:id="@+id/editDadosCpf"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="CPF *"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#7D8990"
+                android:inputType="number"
+                android:background="@drawable/bg_input_dark"
+                android:layout_marginTop="9dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INFORMAÇÕES DE CONTATO"
+                android:textColor="#FF7A00"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/editDadosTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="Telefone principal *"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#7D8990"
+                android:inputType="phone"
+                android:background="@drawable/bg_input_dark" />
+
+            <EditText
+                android:id="@+id/editDadosTelefone2"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="Telefone alternativo"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#7D8990"
+                android:inputType="phone"
+                android:background="@drawable/bg_input_dark"
+                android:layout_marginTop="9dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PREFERÊNCIAS"
+                android:textColor="#FF7A00"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#0C1419"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔔 Receber notificações e promoções\nFique por dentro das novidades."
+                        android:textColor="#D9E0E4"
+                        android:textSize="13sp" />
+
+                    <Switch
+                        android:id="@+id/switchNotificacoes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:buttonTint="#FF7A00" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSalvarDados"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="▣  SALVAR ALTERAÇÕES"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="18dp"
+                app:backgroundTint="#FF7A00"
+                app:cornerRadius="16dp" />
+
+            <TextView
+                android:id="@+id/btnVoltarDados"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="‹  VOLTAR"
+                android:textColor="#FF7A00"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_outline_orange" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔒 Seus dados ficam armazenados com segurança e são usados somente para melhorar sua experiência na RCAR Premium."
+                android:textColor="#7F8B92"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:padding="18dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/bottom_nav" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#090909" android:padding="18dp">
+    <TextView android:id="@+id/btnVoltar" android:layout_width="50dp" android:layout_height="50dp" android:text="‹" android:textColor="#FFFFFF" android:textSize="34sp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Termos de Uso e Privacidade" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold"/>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="10dp" android:text="1. Aceitação dos termos\n\nAo utilizar o RCAR Premium, você concorda com as regras de uso do aplicativo.\n\n2. Cadastro e segurança\n\nMantenha seus dados de acesso protegidos. O aplicativo desta versão utiliza armazenamento local para testes.\n\n3. Compras\n\nOs valores e produtos exibidos são dados de demonstração até a integração de um servidor de produção.\n\n4. Privacidade\n\nOs dados cadastrados nesta versão permanecem no dispositivo.\n\n5. Atendimento\n\nEm caso de dúvida, utilize a área de suporte." android:textColor="#CCCCCC" android:textSize="15sp" android:lineSpacingExtra="5dp"/>
+    </ScrollView>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp" android:background="@drawable/bg_floating_checkout" android:padding="9dp" android:elevation="14dp"><Button android:id="@+id/btnAceitar" android:layout_width="match_parent" android:layout_height="52dp" android:text="LI E ACEITO" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00" android:textAllCaps="false" android:minHeight="48dp"/>
+</LinearLayout></LinearLayout>

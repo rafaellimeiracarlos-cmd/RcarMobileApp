@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0B0C0E">
+    <!-- Topo da Tela -->
+
+    <LinearLayout android:id="@+id/headerCarrinho" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="16dp" android:gravity="center_vertical" android:background="#111315">
+        <ImageView android:id="@+id/BottomVolt" android:layout_width="24dp" android:layout_height="30dp" android:clickable="true" android:focusable="true" android:src="@drawable/btnvoltar"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:text="Meu Carrinho" android:textSize="20sp" android:textStyle="bold" android:textColor="#F7F7F7"/>
+    </LinearLayout>
+
+    <!-- Lista de Produtos -->
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerCarrinho" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/headerCarrinho" android:layout_above="@id/footerCarrinho" android:paddingVertical="8dp" android:clipToPadding="false" android:paddingBottom="10dp"/>
+
+    <!-- Rodapé com Total e Botão -->
+
+    <LinearLayout android:id="@+id/footerCarrinho" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:orientation="vertical" android:padding="14dp" android:background="@drawable/bg_floating_checkout" android:elevation="18dp" android:layout_marginStart="14dp" android:layout_marginEnd="14dp" android:layout_marginBottom="18dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Total:" android:textSize="18sp" android:textColor="#D1D5DB"/>
+
+            <TextView android:id="@+id/txtValorTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="R$ 0,00" android:textSize="20sp" android:textStyle="bold" android:textColor="#FF8200"/>
+        </LinearLayout>
+
+        <!-- Botão Continuar Comprando -->
+
+        <Button android:id="@+id/btnContinuarComprando" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginBottom="8dp" android:text="Continuar Comprando" android:backgroundTint="#FFFFFF" android:textColor="#FF5722" android:textStyle="bold" android:minHeight="48dp" android:textAllCaps="false"/>
+
+        <!-- Botão Finalizar Compra -->
+
+        <Button android:id="@+id/btnFinalizarCompra" android:layout_width="match_parent" android:layout_height="50dp" android:text="Finalizar Compra" android:backgroundTint="#FF5722" android:textColor="@color/white" android:textStyle="bold" android:minHeight="48dp" android:textAllCaps="false"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootPedidos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A0B"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/conteudoPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="26dp">
+
+            <LinearLayout
+                android:id="@+id/toolbarPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:id="@+id/btnVoltarPedidos"
+                    android:layout_width="38dp"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="‹"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTituloPedidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Meus pedidos"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtSubtituloPedidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Acompanhe cada etapa da sua compra"
+                        android:textColor="#A4A4AA"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtModoPedidos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_order_badge"
+                    android:paddingStart="9dp"
+                    android:paddingTop="7dp"
+                    android:paddingEnd="9dp"
+                    android:paddingBottom="7dp"
+                    android:text="● MINHA CONTA"
+                    android:textColor="#FF7000"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardHeroPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_order_hero"
+                android:orientation="vertical"
+                android:padding="17dp">
+
+                <TextView
+                    android:id="@+id/txtHeroEyebrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🚘  EXPERIÊNCIA RCAR PREMIUM"
+                    android:textColor="#FF7000"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtHeroTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="Tudo organizado para você acompanhar sua compra."
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtHeroDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Consulte o status, os itens e o valor dos seus pedidos em um só lugar."
+                    android:textColor="#CABEB4"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="2dp"
+                android:paddingTop="19dp"
+                android:paddingEnd="2dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtTituloResumoPedidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RESUMO DAS COMPRAS"
+                    android:textColor="#FF7000"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtSubtituloResumoPedidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Resumo do seu histórico"
+                    android:textColor="#A4A4AA"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/statsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="2dp"
+                android:paddingTop="19dp"
+                android:paddingEnd="2dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtSectionPedidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SEU HISTÓRICO"
+                    android:textColor="#FF7000"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtSectionPedidosSub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Confira cada pedido e seu andamento"
+                    android:textColor="#A4A4AA"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/fieldBuscaPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:background="@drawable/bg_order_search"
+                android:hint="Buscar pedido ou produto..."
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#828288"
+                android:textSize="14sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollFiltrosPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:fillViewport="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/filterContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="8dp" />
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/ordersContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="3dp" />
+
+            <LinearLayout
+                android:id="@+id/layoutPermissaoNotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/bg_order_note_hint"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🔒  NOTAS INTERNAS E PERMISSÕES"
+                    android:textColor="#FF7000"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="O CEO pode editar as notas. Funcionários só podem fazê-lo enquanto a permissão ‘Gerenciar pedidos’ estiver habilitada pelo CEO. As notas não são exibidas ao cliente."
+                    android:textColor="#D0C6BE"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomNavPedidos"
+        layout="@layout/bottom_nav" />
+</LinearLayout>

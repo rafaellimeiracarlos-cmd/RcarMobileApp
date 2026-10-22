@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0D0D0D">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <ImageView android:layout_width="150dp" android:layout_height="65dp" android:layout_gravity="center_horizontal" android:src="@drawable/imglogo"/>
+
+        <TextView android:id="@+id/txtTituloPainel" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:gravity="center" android:text="Painel" android:textColor="#FFFFFF" android:textSize="24sp" android:textStyle="bold"/>
+
+        <TextView android:id="@+id/txtDescricaoPainel" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:textColor="#AAAAAA" android:textSize="13sp" android:layout_marginBottom="20dp"/>
+
+        <Button android:id="@+id/btnProdutosInterno" android:layout_width="match_parent" android:layout_height="54dp" android:text="📦 Produtos" android:textColor="#FFFFFF" android:backgroundTint="#FF5722"/>
+
+        <Button android:id="@+id/btnCadastrarProduto" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="➕ Cadastrar produto" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnConferenciaEstoque" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="10dp" android:text="✓  Conferência de peças • aprovação do CEO" android:textAllCaps="false" android:textStyle="bold" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00"/>
+        <Button android:id="@+id/btnImportarNotaInterno" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="10dp" android:text="▣  Importar NF-e • XML / QR / Link" android:textAllCaps="false" android:textStyle="bold" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00"/>
+
+        <Button android:id="@+id/btnCentralNotas" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="10dp" android:text="▣  Central de notas • arquivo e avisos ao CEO" android:textAllCaps="false" android:textStyle="bold" android:textColor="#FFFFFF" android:backgroundTint="#262626"/>
+
+        <Button android:id="@+id/btnVendasInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="🛒 Vendas / Pedidos" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnPedidosInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="📋 Gerenciar pedidos" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnEstoqueInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="📊 Controle de Estoque" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnClientesInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="👥 Clientes" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnRelatoriosInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="📈 Relatórios" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnConfiguracoesInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="⚙ Configurações" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnInsightsCeo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="📊 Insights executivos do CEO" android:textColor="#FFFFFF" android:backgroundTint="#343434"/>
+
+        <Button android:id="@+id/btnGestaoUsuariosInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="🔐 Logins e permissões" android:textColor="#FFFFFF" android:backgroundTint="#343434"/>
+
+        <Button android:id="@+id/btnSessoesCeo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="⏱ Sessões e tempo de acesso" android:textColor="#FFFFFF" android:backgroundTint="#343434"/>
+
+        <Button android:id="@+id/btnProdutosCadastrados" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="✎ Produtos cadastrados / editar" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+        <Button android:id="@+id/btnPainelLoja" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="▣ Visualizar painel da loja" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+        <Button android:id="@+id/btnModoTesteCompraCeo" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="10dp" android:text="🧪 SIMULAR COMPRA • MODO CEO" android:textAllCaps="false" android:textStyle="bold" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00"/>
+        <Button android:id="@+id/btnEncerrarTesteCompraCeo" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="8dp" android:text="Encerrar modo de teste ativo" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#6E3B20"/>
+        <Button android:id="@+id/btnHistoricoComprasTesteCeo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="8dp" android:text="Histórico de compras de teste" android:textAllCaps="false" android:textColor="#FFAA51" android:backgroundTint="#242424"/>
+        <Button android:id="@+id/btnOfertasCeo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="％ Produtos em oferta / descontos" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnConfigurarPixCeo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="＄ Configurar chave Pix da loja" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+
+        <Button android:id="@+id/btnMeusProdutosFuncionario" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="📦 Meus produtos / ações" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00"/>
+        <Button android:id="@+id/btnSolicitacoesEquipeCeo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="🧾 Solicitações da equipe / estoque baixo" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+        <Button android:id="@+id/btnMargemLucroCeo" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="📈 Margem de lucro e vendas" android:textColor="#FFFFFF" android:backgroundTint="#242424"/>
+
+        <Button android:id="@+id/btnBuscaPlacaPainel" android:layout_width="match_parent"
+            android:layout_height="54dp" android:layout_marginTop="10dp"
+            android:text="⌕  Buscar peças pela placa" android:textColor="#FFFFFF"
+            android:textAllCaps="false" android:backgroundTint="#FF7A00" />
+        <Button android:id="@+id/btnCompatibilidadeCeo" android:layout_width="match_parent"
+            android:layout_height="54dp" android:layout_marginTop="10dp"
+            android:text="✓  Compatibilidade por carro • CEO" android:textColor="#FFFFFF"
+            android:textAllCaps="false" android:backgroundTint="#252525" />
+        <Button android:id="@+id/btnMarketplaceInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="✦ Marketplace • prévia" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00"/><Button android:id="@+id/btnLojasParceirasInterno" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="10dp" android:text="♙ Lojas parceiras / servidor IA" android:textColor="#FFFFFF" android:backgroundTint="#242424"/><Button android:id="@+id/btnSairInterno" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="28dp" android:text="👤 MEU PERFIL • CONTA CONECTADA" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00"/>
+    </LinearLayout>
+</ScrollView>

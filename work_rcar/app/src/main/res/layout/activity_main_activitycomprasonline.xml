@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='utf-8'?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0B0C0E">
+    <ScrollView android:id="@+id/scrollLoja" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="0dp" android:fillViewport="false" android:clipToPadding="false" android:paddingBottom="100dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingTop="12dp" android:paddingEnd="16dp" android:paddingBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="74dp" android:background="@drawable/bg_header" android:gravity="center_vertical" android:paddingStart="12dp" android:paddingEnd="8dp">
+                <ImageView android:id="@+id/imgLogoTop" android:layout_width="96dp" android:layout_height="60dp" android:contentDescription="Logo RCAR Premium" android:scaleType="fitCenter" android:src="@drawable/imglogo"/>
+
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+
+                <Button android:id="@+id/btnIrCadastro" android:layout_width="82dp" android:layout_height="42dp" android:background="@drawable/bg_dark_button" android:padding="0dp" android:text="CADASTRO" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                <Button android:id="@+id/btnIrLogin" android:layout_width="76dp" android:layout_height="42dp" android:layout_marginStart="7dp" android:background="@drawable/bg_orange_button" android:padding="0dp" android:text="LOGIN" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                <ImageButton android:id="@+id/btnMenuCategorias" android:layout_width="42dp" android:layout_height="42dp" android:layout_marginStart="4dp" android:background="@android:color/transparent" android:contentDescription="Abrir menu" android:padding="8dp" android:src="@android:drawable/ic_menu_sort_by_size" android:tint="#FF7A00"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layoutPesquisa" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="12dp" android:background="@drawable/bg_search" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="8dp">
+                <TextView android:layout_width="28dp" android:layout_height="wrap_content" android:text="⌕" android:textColor="#FFFFFF" android:textSize="30sp" android:gravity="center"/>
+
+                <EditText android:id="@+id/editPesquisa" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@android:color/transparent" android:hint="O que você procura? Ex: Amortecedor..." android:imeOptions="actionSearch" android:inputType="text" android:maxLines="1" android:paddingStart="8dp" android:textColor="#FFFFFF" android:textColorHint="#999999" android:textSize="14sp"/>
+
+                <ImageButton android:id="@+id/btnLupaPesquisa" android:layout_width="42dp" android:layout_height="42dp" android:background="@android:color/transparent" android:contentDescription="Buscar" android:padding="8dp" android:src="@drawable/lupapesquisa"/>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="202dp" android:layout_marginTop="16dp" app:cardCornerRadius="18dp" app:cardElevation="0dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:background="#111111">
+                    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.5" android:scaleType="centerCrop" android:src="@drawable/pecasautomotiva"/>
+
+                    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="#99000000"/>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="18dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SEU CARRO SEMPRE" android:textColor="#FFFFFF" android:textSize="16sp" android:textStyle="bold"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EM BOAS MÃOS" android:textColor="#FF7A00" android:textSize="25sp" android:textStyle="bold"/>
+
+                        <TextView android:layout_width="230dp" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Peças de qualidade, preços especiais e entrega rápida." android:textColor="#EEEEEE" android:textSize="12sp"/>
+
+                        <Button android:id="@+id/btnVerprodutos" android:layout_width="145dp" android:layout_height="40dp" android:layout_marginTop="12dp" android:background="@drawable/bg_orange_button" android:padding="0dp" android:text="VER OFERTAS →" android:textColor="#FFFFFF" android:textSize="11sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button android:id="@+id/btnBuscaPlaca"
+                android:layout_width="match_parent" android:layout_height="56dp"
+                android:layout_marginTop="14dp" android:text="⌕  BUSCAR PEÇAS PELA PLACA MERCOSUL  →"
+                android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="14sp"
+                android:textStyle="bold" android:background="@drawable/bg_orange_button"
+                android:contentDescription="Buscar peças compatíveis pela placa Mercosul ou antiga" />
+
+            <Button android:id="@+id/btnMarketplace" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="14dp" android:text="✦  MARKETPLACE RCARPREMIUM  •  LOJAS PARCEIRAS" android:textColor="#FFFFFF" android:textSize="13sp" android:textStyle="bold" android:background="@drawable/bg_orange_button"/><androidx.cardview.widget.CardView android:id="@+id/cardOfertasSemana" android:layout_width="match_parent" android:layout_height="78dp" android:layout_marginTop="14dp" android:clickable="true" android:focusable="true" android:contentDescription="Abrir ofertas da semana" app:cardBackgroundColor="#171717" app:cardCornerRadius="16dp" app:cardElevation="2dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:padding="14dp" android:background="@drawable/bg_offer_card">
+                    <View android:layout_width="4dp" android:layout_height="match_parent" android:background="#FF7A00"/>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:paddingStart="12dp" android:paddingEnd="8dp">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="OFERTAS DA SEMANA" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold"/>
+
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Peças selecionadas para cuidar do seu carro" android:textColor="#BDBDBD" android:textSize="11sp"/>
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VER OFERTAS  ›" android:textColor="#FF8A00" android:textSize="11sp" android:textStyle="bold"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="CATEGORIAS" android:textColor="#FFFFFF" android:textSize="17sp" android:textStyle="bold"/>
+
+                <TextView android:id="@+id/btnVerCategorias" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="6dp" android:text="Ver todas →" android:textColor="#FF7A00" android:textSize="12sp" android:textStyle="bold" android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="142dp" android:layout_marginTop="10dp" android:scrollbars="none">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView android:id="@+id/cardFreios" android:layout_width="110dp" android:layout_height="138dp" android:layout_marginEnd="8dp" android:clickable="true" app:cardBackgroundColor="#151515" app:cardCornerRadius="12dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:padding="8dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛑" android:textSize="34sp"/>
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="FREIOS" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                            <TextView android:layout_width="70dp" android:layout_height="26dp" android:layout_marginTop="8dp" android:background="@drawable/bg_orange_button" android:gravity="center" android:text="VER" android:textColor="#FFFFFF" android:textSize="9sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView android:id="@+id/cardSuspensao" android:layout_width="110dp" android:layout_height="138dp" android:layout_marginEnd="8dp" android:clickable="true" app:cardBackgroundColor="#151515" app:cardCornerRadius="12dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌀" android:textSize="34sp"/>
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SUSPENSÃO" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                            <TextView android:layout_width="70dp" android:layout_height="26dp" android:layout_marginTop="8dp" android:background="@drawable/bg_orange_button" android:gravity="center" android:text="VER" android:textColor="#FFFFFF" android:textSize="9sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView android:id="@+id/cardOleo" android:layout_width="110dp" android:layout_height="138dp" android:layout_marginEnd="8dp" android:clickable="true" app:cardBackgroundColor="#151515" app:cardCornerRadius="12dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛢️" android:textSize="34sp"/>
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ÓLEOS" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                            <TextView android:layout_width="70dp" android:layout_height="26dp" android:layout_marginTop="8dp" android:background="@drawable/bg_orange_button" android:gravity="center" android:text="VER" android:textColor="#FFFFFF" android:textSize="9sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView android:id="@+id/cardPneus" android:layout_width="110dp" android:layout_height="138dp" android:layout_marginEnd="8dp" android:clickable="true" app:cardBackgroundColor="#151515" app:cardCornerRadius="12dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🛞" android:textSize="34sp"/>
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PNEUS" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                            <TextView android:layout_width="70dp" android:layout_height="26dp" android:layout_marginTop="8dp" android:background="@drawable/bg_orange_button" android:gravity="center" android:text="VER" android:textColor="#FFFFFF" android:textSize="9sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView android:id="@+id/cardFerramentas" android:layout_width="110dp" android:layout_height="138dp" android:clickable="true" app:cardBackgroundColor="#151515" app:cardCornerRadius="12dp">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🧰" android:textSize="34sp"/>
+
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FERRAMENTAS" android:textColor="#FFFFFF" android:textSize="9sp" android:textStyle="bold"/>
+
+                            <TextView android:layout_width="70dp" android:layout_height="26dp" android:layout_marginTop="8dp" android:background="@drawable/bg_orange_button" android:gravity="center" android:text="VER" android:textColor="#FFFFFF" android:textSize="9sp" android:textStyle="bold"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="PRODUTOS EM DESTAQUE" android:textColor="#FFFFFF" android:textSize="17sp" android:textStyle="bold"/>
+
+                <TextView android:id="@+id/btnVerTodosProdutos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:padding="6dp" android:text="Ver todas →" android:textColor="#FF7A00" android:textSize="12sp" android:textStyle="bold" android:clickable="true" android:focusable="true"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="285dp" android:layout_marginEnd="5dp" android:layout_weight="1" app:cardBackgroundColor="#151515" app:cardCornerRadius="14dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="24dp" android:background="@drawable/bg_badge" android:gravity="center" android:paddingStart="8dp" android:paddingEnd="8dp" android:text="DESTAQUE" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                        <ImageView android:layout_width="match_parent" android:layout_height="105dp" android:layout_marginTop="5dp" android:scaleType="centerCrop" android:src="@drawable/pecasautomotiva"/>
+
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Pastilha de Freio RCar\nLinha Premium" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="SELEÇÃO RCAR PREMIUM" android:textColor="#FFB000" android:textSize="10sp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="R$ 150,00" android:textColor="#FF7A00" android:textSize="18sp" android:textStyle="bold"/>
+
+                        <Button android:id="@+id/btncomprar" android:layout_width="match_parent" android:layout_height="38dp" android:layout_marginTop="7dp" android:background="@drawable/bg_orange_button" android:padding="0dp" android:text="ADICIONAR AO CARRINHO" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView android:layout_width="0dp" android:layout_height="285dp" android:layout_marginStart="5dp" android:layout_weight="1" app:cardBackgroundColor="#151515" app:cardCornerRadius="14dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="10dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="24dp" android:background="@drawable/bg_badge" android:gravity="center" android:paddingStart="8dp" android:paddingEnd="8dp" android:text="ESSENCIAL" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+
+                        <ImageView android:layout_width="match_parent" android:layout_height="105dp" android:layout_marginTop="5dp" android:scaleType="centerCrop" android:src="@drawable/pecasautomotiva"/>
+
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:text="Óleo Sintético 5W30\nProteção para o motor" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="DESTAQUE DA SEMANA" android:textColor="#FFB000" android:textSize="10sp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="R$ 45,90" android:textColor="#FF7A00" android:textSize="18sp" android:textStyle="bold"/>
+
+                        <Button android:id="@+id/btnComprarOleo" android:layout_width="match_parent" android:layout_height="38dp" android:layout_marginTop="7dp" android:background="@drawable/bg_orange_button" android:padding="0dp" android:text="ADICIONAR AO CARRINHO" android:textColor="#FFFFFF" android:textSize="10sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Acesso ao topo apenas no FINAL da rolagem: não cobre produtos. -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="92dp"
+                    android:layout_height="2dp"
+                    android:background="#FF7A00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="VOCÊ CHEGOU AO FINAL"
+                    android:textColor="#BDBDBD"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.10"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btnVoltarAoTopoLoja"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/bg_voltar_ao_topo"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Voltar ao topo da loja"
+                    android:gravity="center"
+                    android:text="↑  VOLTAR AO TOPO"
+                    android:textColor="#FF9122"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="90dp" android:layout_gravity="bottom" android:clipChildren="false" android:clipToPadding="false"><include layout="@layout/bottom_nav"/>
+</FrameLayout></FrameLayout>

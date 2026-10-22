@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0C0C"
+    tools:context=".MainActivityEsqueceuSenha">
+    <!-- TÍTULO DA TELA -->
+
+    <TextView
+        android:id="@+id/textTituloRecuperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/recuperar_senha"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- TEXTO EXPLICATIVO -->
+
+    <TextView
+        android:id="@+id/textDescricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/insira_o_e_mail_cadastrado_abaixo_para_receber_as_instru_es_de_redefini_o_de_senha"
+        android:textColor="#EFEFEF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/editEmailRecuperar"
+        app:layout_constraintStart_toStartOf="@+id/editEmailRecuperar"
+        app:layout_constraintTop_toBottomOf="@+id/textTituloRecuperar" />
+
+    <!-- CAMPO DE EMAIL -->
+
+    <EditText
+        android:id="@+id/editEmailRecuperar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:autofillHints="emailAddress"
+        android:background="@android:color/white"
+        android:hint="@string/digite_seu_e_mail"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="16dp"
+        android:textColor="#222222"
+        android:textColorHint="#888888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDescricao" />
+
+    <!-- BOTÃO ENVIAR (QUADRADO LARANJA) -->
+
+    <Button
+        android:id="@+id/btnEnviarLink"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FF7A00"
+        android:text="@string/enviar_link"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/editEmailRecuperar"
+        app:layout_constraintStart_toStartOf="@+id/editEmailRecuperar"
+        app:layout_constraintTop_toBottomOf="@+id/editEmailRecuperar" />
+
+    <!-- TEXTO VOLTAR AO LOGIN -->
+
+    <TextView
+        android:id="@+id/textVoltarLoginRecuperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="@string/voltar_para_o_login"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviarLink" />
+</androidx.constraintlayout.widget.ConstraintLayout>

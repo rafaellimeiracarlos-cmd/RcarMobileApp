@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#05090B">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/btnBackEnderecos"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="‹"
+                    android:textColor="#FF7A00"
+                    android:textSize="40sp"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/rcarlogo"
+                    android:scaleType="centerInside" />
+
+                <Space
+                    android:layout_width="48dp"
+                    android:layout_height="1dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endereços de Entrega"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gerencie onde seus pedidos devem ser entregues."
+                android:textColor="#9AA4AA"
+                android:textSize="14sp"
+                android:layout_marginTop="3dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardEnderecoPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="#0C1419"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:gravity="center"
+                            android:text="⌂"
+                            android:textColor="#FFFFFF"
+                            android:textSize="28sp"
+                            android:background="@drawable/bg_category" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Endereço principal"
+                                android:textColor="#FF7A00"
+                                android:textStyle="bold"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/txtPrincipalEndereco"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rua Exemplo, 123 - Centro\nSão Paulo - SP | CEP 01000-000"
+                                android:textColor="#DDE4E8"
+                                android:textSize="13sp"
+                                android:layout_marginTop="4dp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PADRÃO"
+                            android:textColor="#FFFFFF"
+                            android:textSize="10sp"
+                            android:padding="7dp"
+                            android:background="#159447" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#24333B"
+                        android:layout_marginTop="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/btnEditarPrincipal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="✎  Editar"
+                            android:textColor="#FFFFFF"
+                            android:clickable="true" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="24dp"
+                            android:background="#26343C" />
+
+                        <TextView
+                            android:id="@+id/btnUsarPrincipal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="✓  Usar este endereço"
+                            android:textColor="#FF9A26"
+                            android:clickable="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="22dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Meus Endereços"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNovoEndereco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="＋ NOVO ENDEREÇO"
+                    android:textSize="11sp"
+                    android:textColor="#FF7A00"
+                    app:backgroundTint="#10181D"
+                    app:strokeColor="#FF7A00"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerEnderecos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dica: mantenha um endereço principal para agilizar o checkout."
+                android:textColor="#77858D"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:padding="18dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        layout="@layout/bottom_nav" />
+</LinearLayout>

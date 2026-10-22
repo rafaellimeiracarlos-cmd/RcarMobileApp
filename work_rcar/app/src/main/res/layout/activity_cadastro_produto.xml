@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090909"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="28dp">
+
+        <!-- Cabeçalho -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnVoltar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_product_input"
+                android:clickable="true"
+                android:contentDescription="Voltar"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:contentDescription="RCAR Premium"
+                android:scaleType="fitCenter"
+                android:src="@drawable/imglogo" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_product_badge"
+                android:paddingStart="10dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="6dp"
+                android:text="ÁREA ADMIN"
+                android:textColor="#FF7A00"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Cadastro de produto"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Cadastre informações, valores e estoque em um só lugar."
+            android:textColor="#9B9B9B"
+            android:textSize="13sp" />
+
+        <!-- Destaque -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_product_hero"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NOVO ITEM NO CATÁLOGO"
+                    android:textColor="#FF7A00"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Mais controle.
+Mais organização."
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Os campos com * são obrigatórios."
+                    android:textColor="#B7B7B7"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:background="@drawable/bg_product_badge"
+                android:gravity="center"
+                android:text="📦"
+                android:textSize="27sp" />
+        </LinearLayout>
+
+        <!-- 01 - Informações -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            app:cardBackgroundColor="#151515"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#292929"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="01  INFORMAÇÕES DO PRODUTO"
+                    android:textColor="#FF7A00"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="Identifique o item para facilitar a busca e o controle."
+                    android:textColor="#929292"
+                    android:textSize="12sp" />
+
+                <TextView style="@style/ProductFieldLabel" android:text="Nome do produto *" />
+                <EditText
+                    android:id="@+id/editNomeProduto"
+                    style="@style/ProductEditText"
+                    android:hint="Ex.: Kit pastilha de freio dianteira"
+                    android:inputType="textCapSentences" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="SKU / código interno" />
+                        <EditText
+                            android:id="@+id/editSkuProduto"
+                            style="@style/ProductEditText"
+                            android:hint="RCP-000001"
+                            android:inputType="textCapCharacters"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/btnGerarSku"
+                        android:layout_width="88dp"
+                        android:layout_height="52dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_product_outline_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:text="GERAR SKU"
+                        android:textColor="#FF7A00"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Categoria *" />
+                        <Spinner
+                            android:id="@+id/editCategoriaProduto"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:background="@drawable/bg_product_input"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="8dp"
+                            android:popupBackground="#202020" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Marca" />
+                        <EditText
+                            android:id="@+id/editMarcaProduto"
+                            style="@style/ProductEditText"
+                            android:hint="Ex.: Bosch"
+                            android:inputType="textCapWords"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/ProductFieldLabel"
+                    android:layout_marginTop="12dp"
+                    android:text="Código de barras (opcional)" />
+                <EditText
+                    android:id="@+id/editCodigoBarrasProduto"
+                    style="@style/ProductEditText"
+                    android:hint="Digite ou informe o EAN"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <TextView
+                    style="@style/ProductFieldLabel"
+                    android:layout_marginTop="12dp"
+                    android:text="Descrição do produto" />
+                <EditText
+                    android:id="@+id/editDescricaoProduto"
+                    style="@style/ProductEditText"
+                    android:gravity="top|start"
+                    android:hint="Detalhes, aplicação, compatibilidade e observações..."
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:singleLine="false"
+                    android:minHeight="88dp"
+                    android:paddingTop="13dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 02 - Preços -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="#151515"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#292929"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="02  PREÇOS E RENTABILIDADE"
+                    android:textColor="#FF7A00"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="Informe o custo para acompanhar a margem estimada."
+                    android:textColor="#929292"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Preço de custo (R$)" />
+                        <EditText
+                            android:id="@+id/editPrecoCustoProduto"
+                            style="@style/ProductEditText"
+                            android:hint="0,00"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Preço de venda (R$) *" />
+                        <EditText
+                            android:id="@+id/editPrecoProduto"
+                            style="@style/ProductEditText"
+                            android:hint="149,90"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    app:cardBackgroundColor="#20170F"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#4B2A12"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="13dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="PRÉVIA DE VENDA"
+                            android:textColor="#FF7A00"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/txtResumoNome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Novo produto"
+                            android:textColor="#D5D5D5"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/txtResumoPreco"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Preço de venda: R$ 0,00"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/txtResumoMargem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Informe o custo e o preço para estimar a margem bruta."
+                            android:textColor="#C1C1C1"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 03 - Estoque -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="#151515"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#292929"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="03  ESTOQUE E LOGÍSTICA"
+                    android:textColor="#FF7A00"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="Defina a quantidade inicial e o nível de reposição."
+                    android:textColor="#929292"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Estoque inicial *" />
+                        <EditText
+                            android:id="@+id/editEstoqueProduto"
+                            style="@style/ProductEditText"
+                            android:hint="0 unidades"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Alerta de estoque baixo" />
+                        <EditText
+                            android:id="@+id/editEstoqueMinimoProduto"
+                            style="@style/ProductEditText"
+                            android:hint="5 unidades"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="5" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtResumoEstoque"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_product_badge"
+                    android:padding="11dp"
+                    android:text="Estoque inicial: 0 unidades"
+                    android:textColor="#D8D8D8"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Fornecedor" />
+                        <EditText
+                            android:id="@+id/editFornecedorProduto"
+                            style="@style/ProductEditText"
+                            android:hint="Nome do fornecedor"
+                            android:inputType="textCapWords"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView style="@style/ProductFieldLabel" android:text="Localização" />
+                        <EditText
+                            android:id="@+id/editLocalizacaoProduto"
+                            style="@style/ProductEditText"
+                            android:hint="Ex.: Prateleira A1"
+                            android:inputType="textCapWords"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#2B2B2B" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Produto ativo no catálogo"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Desative para impedir que o item seja anunciado."
+                            android:textColor="#929292"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchProdutoAtivo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        app:thumbTint="#FF7A00"
+                        app:trackTint="#65411F" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalvarProduto"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="18dp"
+            android:text="SALVAR PRODUTO"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF7A00"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_save"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Confira os dados antes de salvar. O produto ficará disponível no estoque local."
+            android:textColor="#737373"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+</ScrollView>

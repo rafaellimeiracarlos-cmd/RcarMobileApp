@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Rcarpremium"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Rcarpremium">
+        <meta-data android:name="com.google.mlkit.vision.DEPENDENCIES" android:value="barcode_ui" />
+        <provider android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.notas" android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/notas_paths" />
+        </provider>
+        <activity android:name=".MainActivityTrocarSenhaInicial" android:exported="false" />
+        <activity android:name=".MainActivityCentralNotas" android:exported="false" />
+        <activity android:name=".MainActivityAcompanharPedido" android:exported="false" />
+        <activity android:name=".MainActivityConferenciaEstoque" android:exported="false" />
+        <activity android:name=".MainActivityImportarNota" android:exported="false" />
+        <activity android:name=".MainActivityBuscaPlaca" android:exported="false" />
+        <activity android:name=".MainActivityCompatibilidadeCeo" android:exported="false" />
+        <activity android:name=".MainActivityPerfilInterno" android:exported="false" />
+        <activity android:name=".MainActivityMarketplace" android:exported="false" />
+        <activity android:name=".MainActivityLojasParceiras" android:exported="false" />
+        <activity android:name=".MainActivityLocalizacaoMarketplace" android:exported="false" />
+        <activity android:name=".MainActivityAssistenteCompra" android:exported="false" />
+        <activity android:name=".MainActivityConfigurarPix" android:exported="false" />
+        <activity android:name=".MainActivityProdutosCadastrados" android:exported="false" />
+        <activity android:name=".MainActivityOfertas" android:exported="false" />
+        <activity android:name=".MainActivityProdutosFuncionario" android:exported="false" />
+        <activity android:name=".MainActivitySolicitacoesEstoque" android:exported="false" />
+        <activity android:name=".MainActivityMargemLucro" android:exported="false" />
+        <activity
+            android:name=".MainActivityDadosCadastrais"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityEnderecosEntrega"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityHome"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityPagamento"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityVerProdutos"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityItemCarrinho"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivitycomprasonline"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. OUTRAS TELAS DO APP SECUNDÁRIAS (FECHADAS CORRETAMENTE COM />) -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityCadastro"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityEsqueceuSenha"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityAcessoInterno"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityGestaoUsuarios"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityInsightsCeo"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivitySessoesCeo"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityHistoricoTesteCeo"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityPainelInterno"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityCategorias"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityPedidos"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".MainActivityListaProdutos"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivitySuporte"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityConfiguracoes"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityTermos"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivitySobre"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityCadastroProduto"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityClientes"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityVendas"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityEstoque"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivityRelatorios"
+            android:exported="false" />
+    </application>
+</manifest>

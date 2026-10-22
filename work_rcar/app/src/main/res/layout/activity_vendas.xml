@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#090909"
+    android:padding="18dp">
+    <TextView
+        android:id="@+id/btnVoltar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="‹"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vendas"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TOTAL DE VENDAS"
+        android:textColor="#999999" />
+
+    <TextView
+        android:id="@+id/txtTotalVendas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R$ 1.250,90"
+        android:textColor="#FF7A00"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="18dp"
+        android:background="#181818"
+        android:text="Pedidos hoje: 12\nTicket médio: R$ 103,82\n\nStatus: pedidos e pagamentos locais"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+</LinearLayout>

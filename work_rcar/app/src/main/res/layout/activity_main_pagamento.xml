@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0D0D0D" tools:context=".MainActivityPagamento">
+    <!-- CABEÇALHO -->
+
+    <LinearLayout android:id="@+id/headerPagamento" android:layout_width="match_parent" android:layout_height="56dp" android:background="#1A1A1A" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp">
+        <ImageView android:id="@+id/btnVoltar" android:layout_width="28dp" android:layout_height="28dp" android:contentDescription="Voltar" android:src="@drawable/btnvoltar" app:tint="#FFFFFF"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:text="Finalizar Pagamento" android:textColor="#FFFFFF" android:textSize="18sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/layoutBotaoFinalizar" android:layout_below="@id/headerPagamento">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <!-- RESUMO DO PEDIDO -->
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RESUMO DO PEDIDO" android:textColor="#FF7A00" android:textSize="12sp" android:textStyle="bold"/>
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:cardBackgroundColor="#1A1A1A" app:cardCornerRadius="6dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:id="@+id/txtProdutosQtd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Produtos (0)" android:textColor="#CCCCCC" android:textSize="13sp"/>
+
+                        <TextView android:id="@+id/txtPrecoProdutos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="R$ 0,00" android:textColor="#FFFFFF" android:textSize="13sp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Frete" android:textColor="#CCCCCC" android:textSize="13sp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtFretePagamento" android:layout_alignParentEnd="true" android:text="A calcular" android:textColor="#FF7A00" android:textSize="13sp" android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:background="#333333"/>
+
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total a pagar" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"/>
+
+                        <TextView android:id="@+id/txtTotalPagar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="R$ 0,00" android:textColor="#FF7A00" android:textSize="18sp" android:textStyle="bold"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" app:cardBackgroundColor="#1A1A1A" app:cardCornerRadius="14dp" app:cardUseCompatPadding="true">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ENDEREÇO DE ENTREGA" android:textColor="#FF7A00" android:textStyle="bold" android:textSize="12sp"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Informe um endereço completo para calcular o frete e concluir o pedido com segurança." android:textColor="#9FA6B2" android:textSize="12sp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:background="@drawable/bg_checkout_dialog_highlight" android:orientation="vertical" android:padding="12dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resumo do endereço" android:textColor="#FFB35C" android:textStyle="bold" android:textSize="12sp"/>
+                        <TextView android:id="@+id/txtEnderecoPagamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Selecione um endereço para entrega" android:textColor="#FFFFFF" android:textSize="14sp"/>
+                    </LinearLayout>
+                    <Button android:id="@+id/btnSelecionarEnderecoPagamento" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="12dp" android:text="Adicionar endereço de entrega" android:textColor="#FFFFFF" android:backgroundTint="#FF7A00" android:textAllCaps="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- FORMAS DE PAGAMENTO -->
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="FORMA DE PAGAMENTO" android:textColor="#FF7A00" android:textSize="12sp" android:textStyle="bold"/>
+
+            <RadioGroup android:id="@+id/rgFormasPagamento" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                <!-- OPÇÃO PIX -->
+
+                <RadioButton android:id="@+id/rbPix" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginBottom="8dp" android:background="#1A1A1A" android:buttonTint="#FF7A00" android:checked="true" android:paddingStart="12dp" android:paddingEnd="12dp" android:text="Pix (Aprovação imediata - 5% OFF)" android:textColor="#FFFFFF" android:textSize="13sp"/>
+
+                <!-- OPÇÃO CARTÃO DE CRÉDITO -->
+
+                <RadioButton android:id="@+id/rbCartao" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginBottom="8dp" android:background="#1A1A1A" android:buttonTint="#FF7A00" android:paddingStart="12dp" android:paddingEnd="12dp" android:text="Cartão de Crédito" android:textColor="#FFFFFF" android:textSize="13sp"/>
+
+                <!-- OPÇÃO BOLETO -->
+
+                <RadioButton android:id="@+id/rbBoleto" android:layout_width="match_parent" android:layout_height="52dp" android:background="#1A1A1A" android:buttonTint="#FF7A00" android:paddingStart="12dp" android:paddingEnd="12dp" android:text="Boleto Bancário (1 a 2 dias úteis)" android:textColor="#FFFFFF" android:textSize="13sp"/>
+            </RadioGroup>
+
+            <!-- CAMPOS DO CARTÃO DE CRÉDITO -->
+
+            <LinearLayout android:id="@+id/layoutDadosCartao" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical" android:visibility="gone">
+                <EditText android:id="@+id/editNumeroCartao" android:layout_width="match_parent" android:layout_height="46dp" android:background="#1A1A1A" android:hint="Número do Cartão" android:inputType="number" android:paddingStart="12dp" android:paddingEnd="12dp" android:textColor="#FFFFFF" android:textColorHint="#777777" android:textSize="13sp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+                    <EditText android:id="@+id/editValidade" android:layout_width="0dp" android:layout_height="46dp" android:layout_marginEnd="4dp" android:layout_weight="1" android:background="#1A1A1A" android:hint="Validade (MM/AA)" android:inputType="date" android:paddingStart="12dp" android:paddingEnd="12dp" android:textColor="#FFFFFF" android:textColorHint="#777777" android:textSize="13sp"/>
+
+                    <EditText android:id="@+id/editCVC" android:layout_width="0dp" android:layout_height="46dp" android:layout_marginStart="4dp" android:layout_weight="1" android:background="#1A1A1A" android:hint="CVC / CVV" android:inputType="number" android:maxLength="4" android:paddingStart="12dp" android:paddingEnd="12dp" android:textColor="#FFFFFF" android:textColorHint="#777777" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <EditText android:id="@+id/editNomeTitular" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="8dp" android:background="#1A1A1A" android:hint="Nome impresso no cartão" android:inputType="textPersonName" android:paddingStart="12dp" android:paddingEnd="12dp" android:textColor="#FFFFFF" android:textColorHint="#777777" android:textSize="13sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTÃO FIXO DE CONFIRMAÇÃO -->
+
+    <LinearLayout android:id="@+id/layoutBotaoFinalizar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:background="@drawable/bg_floating_checkout" android:padding="12dp" android:layout_marginStart="14dp" android:layout_marginEnd="14dp" android:layout_marginBottom="18dp" android:orientation="vertical" android:elevation="18dp">
+        <Button android:id="@+id/btnConfirmarPagamento" android:layout_width="match_parent" android:layout_height="48dp" android:backgroundTint="#FF7A00" android:text="PAGAR AGORA" android:textColor="#FFFFFF" android:textSize="14sp" android:textStyle="bold" app:cornerRadius="4dp" android:minHeight="48dp" android:textAllCaps="false"/>
+    </LinearLayout>
+</RelativeLayout>

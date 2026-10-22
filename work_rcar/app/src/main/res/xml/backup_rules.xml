@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- NF-e contém dados fiscais e comerciais; não enviar os anexos privados para backup. -->
+    <exclude domain="file" path="notas_fiscais/"/>
+    <exclude domain="sharedpref" path="rcar_arquivo_notas_v1.xml"/>
+    <exclude domain="sharedpref" path="rcarpremium_usuarios.xml"/>
+</full-backup-content>

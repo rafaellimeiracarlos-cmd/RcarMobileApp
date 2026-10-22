@@ -1,0 +1,16 @@
+# Gradle / Android build output
+.gradle/
+**/build/
+/build/
+.externalNativeBuild/
+.cxx/
+
+# Local IDE and SDK configuration
+.idea/
+*.iml
+local.properties
+
+# Android Studio / OS noise
+.DS_Store
+captures/
+Thumbs.db

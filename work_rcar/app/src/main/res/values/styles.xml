@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ProductFieldLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#D7D7D7</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+    <style name="ProductEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:background">@drawable/bg_product_input</item>
+        <item name="android:paddingStart">13dp</item>
+        <item name="android:paddingEnd">13dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColorHint">#858585</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:importantForAutofill">yes</item>
+    </style>
+
+
+    <style name="ThemeOverlay.Rcarpremium.AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:windowBackground">@drawable/bg_rcar_dialog_window</item>
+        <item name="backgroundTint">#0F1117</item>
+        <item name="colorSurface">#0F1117</item>
+        <item name="colorOnSurface">#FFFFFF</item>
+        <item name="colorPrimary">@color/rcar_primary</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#AAB2BF</item>
+        <item name="android:textColorHint">#7D848F</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/RcarDialogTitleText</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/RcarDialogBodyText</item>
+        <item name="buttonBarPositiveButtonStyle">@style/RcarDialogButton.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/RcarDialogButton.Negative</item>
+        <item name="buttonBarNeutralButtonStyle">@style/RcarDialogButton.Negative</item>
+    </style>
+
+    <style name="RcarDialogTitleText" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RcarDialogBodyText" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">#B9C0CC</item>
+    </style>
+
+    <style name="RcarDialogButton.Positive" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/rcar_primary</item>
+    </style>
+
+    <style name="RcarDialogButton.Negative" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textColor">#D2D5DB</item>
+    </style>
+
+</resources>

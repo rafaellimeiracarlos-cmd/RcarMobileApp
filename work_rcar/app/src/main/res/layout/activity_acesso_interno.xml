@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#080808" android:padding="24dp">
+
+    <ImageView android:id="@+id/btnVoltarInterno" android:layout_width="42dp" android:layout_height="42dp"
+        android:padding="10dp" android:src="@drawable/btnvoltar" android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Voltar" />
+
+    <ImageView android:id="@+id/imgLogoInterno" android:layout_width="match_parent" android:layout_height="120dp"
+        android:layout_marginTop="12dp" android:src="@drawable/imglogo" android:scaleType="fitCenter"
+        android:contentDescription="RCAR Premium" />
+
+    <TextView android:id="@+id/txtTituloAcesso" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" android:gravity="center" android:text="Login do Funcionário"
+        android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold" />
+    <TextView android:id="@+id/txtSubtituloAcesso" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="6dp" android:gravity="center" android:text="Acesso ao sistema interno"
+        android:textColor="#AAAAAA" android:textSize="14sp" />
+
+    <EditText android:id="@+id/editUsuarioInterno" android:layout_width="match_parent" android:layout_height="52dp"
+        android:layout_marginTop="32dp" android:hint="Usuário" android:paddingHorizontal="16dp"
+        android:textColor="#FFFFFF" android:textColorHint="#888888" android:backgroundTint="#FF5722"
+        android:inputType="text" />
+    <EditText android:id="@+id/editSenhaInterno" android:layout_width="match_parent" android:layout_height="52dp"
+        android:layout_marginTop="14dp" android:hint="Senha" android:paddingHorizontal="16dp"
+        android:textColor="#FFFFFF" android:textColorHint="#888888" android:backgroundTint="#FF5722"
+        android:inputType="textPassword" />
+
+    <Button android:id="@+id/btnEntrarInterno" android:layout_width="match_parent" android:layout_height="52dp"
+        android:layout_marginTop="24dp" android:text="ENTRAR" android:textColor="#FFFFFF" android:textStyle="bold"
+        android:backgroundTint="#FF5722" />
+
+    <TextView android:id="@+id/btnRecuperarSenhaInterno" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="10dp"
+        android:gravity="center" android:text="Esqueci minha senha • usar token do CEO" android:textColor="#FF7A00" android:textSize="13sp" />
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        android:gravity="center" android:text="RCAR PREMIUM • Sistema interno" android:textColor="#777777" android:textSize="12sp" />
+</LinearLayout>
